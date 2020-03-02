@@ -1612,6 +1612,8 @@ export var tns = function(options) {
     disableUI();
 
     frozen = true;
+
+    events.emit('frozenChanged', info());
   }
 
   function unfreezeSlider () {
@@ -1634,6 +1636,8 @@ export var tns = function(options) {
     enableUI();
 
     frozen = false;
+
+    events.emit('frozenChanged', info());
   }
 
   function disableSlider () {
@@ -2737,6 +2741,7 @@ export var tns = function(options) {
       pagesCached: pagesCached,
       sheet: sheet,
       isOn: isOn,
+      isFrozen: frozen,
       event: e || {},
     };
   }

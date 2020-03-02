@@ -265,9 +265,10 @@ export interface TinySliderInfo {
     slideItems: HTMLCollection;
     visibleNavIndexes?: number;
     visibleNavIndexesCached?: number;
+    isFrozen?: boolean
 }
 
-export type SilderEvent = 'indexChanged' | 'transitionStart' | 'transitionEnd' | 'newBreakpointStart' | 'newBreakpointEnd' | 'touchStart' | 'touchMove' | 'touchEnd' | 'dragStart' | 'dragMove' | 'dragEnd';
+export type SilderEvent = 'indexChanged' | 'transitionStart' | 'transitionEnd' | 'newBreakpointStart' | 'newBreakpointEnd' | 'touchStart' | 'touchMove' | 'touchEnd' | 'dragStart' | 'dragMove' | 'dragEnd' | 'frozenChanged';
 
 export interface TinySliderInstance {
     /**
